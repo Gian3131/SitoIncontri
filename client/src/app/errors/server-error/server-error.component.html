@@ -1,0 +1,13 @@
+<h4>Internal Server Error - Ricarica la pagina per aggiornare.</h4>
+<ng-container *ngIf="error">
+<h5 class="text-danger">Erorre: {{error.message}}</h5>
+<p class="font-weight-bold">Se vedi questo messaggio di errore, probabilmente qualcosa è andato storto.</p>
+<p>Possibili soluzioni:</p>
+<ol>
+    <li>Ispeziona la pagina</li>
+    <li>Controlla la tabella Network</li>
+    <li>Controlla le richieste fallite</li>
+    <li>Esamina le richieste URL e verifica che siano corrette</li>    
+</ol>
+<code class="mt-5" style="background-color:whitesmoke;">{{error.details}}</code>
+</ng-container>
