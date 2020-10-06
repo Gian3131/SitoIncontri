@@ -1,1 +1,51 @@
-<p>member-detail works!</p>
+<div class="row" *ngIf="member">
+    <div class="col-4">
+        <div class="card">
+            <img src="{{member.photoUrl || './assets/user.png'}}" alt="{{member.knownAs}}" class="card-img-top img-thumbnail">
+            <div class="card-body">
+                <div>
+                    <strong>Località:</strong>
+                    <p>{{member.city}}, {{member.country}}</p>
+                </div>
+                <div>
+                    <strong>Età:</strong>
+                    <p>{{member.age}}</p>                    
+                </div>
+                <div>
+                    <strong>Ultima visita:</strong>
+                    <p>{{member.lastActive}}</p>                    
+                </div>
+                <div>
+                    <strong>Iscritto dal:</strong>
+                    <p>{{member.created}}</p>                    
+                </div> 
+                <div class="card-footer">
+                    <div class="btn-group d-flex">
+                        <button class="btn btn-primary">Like</button>
+                        <button class="btn btn-success">Messaggio</button>
+                    </div>
+                </div>           
+            </div>
+        </div>
+    </div>
+    <div class="col-8">
+        <tabset class="member-tabset">
+            <tab heading='Riguardo {{member.knownAs}}'>
+                <h4>Chi sono</h4>
+                <p>{{member.introduction}}</p>
+                <h4>Cosa cerco</h4>
+                <p>{{member.lookingFor}}</p>
+            </tab>
+            <tab heading='Interessi'>
+                <h4>Interessi</h4>
+                <p>{{member.interests}}</p>                
+            </tab>
+            <tab heading='Galleria foto'>
+                <ngx-gallery [options]="galleryOptions" [images]="galleryImages" style="display: inline-block; margin-bottom: 20px;"></ngx-gallery>
+            </tab>
+            <tab heading='Messaggi'>
+                <p>funzione messaggi</p>
+            </tab>
+        </tabset>
+    </div>
+</div>
