@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
     <div class="container">
-        <a class="navbar-brand" routerLink='/'>Amore Per Sfigati</a>                 
+        <a class="navbar-brand" routerLink='/'>App d'incontri</a>                 
             <ul class="navbar-nav mr-auto"><!--*ngIf="accountService.currentUser$ | async" Da inserire come condizione interna se serve-->
               <ng-container >
                 <li class="nav-item">
@@ -19,7 +19,8 @@
             </ul>            
 
             <div class="dropdown" *ngIf="(accountService.currentUser$ | async) as user" dropdown>
-             <a class="dropdown-toggle text-light" dropdownToggle>Utente: {{user.username | titlecase}}</a>
+              <img src="{{user.photoUrl}}" alt="{{user.username}}">
+              <a class="dropdown-toggle text-light ml-2" dropdownToggle>{{user.username | titlecase}}</a>
              <div class="dropdown-menu mt-3" *dropdownMenu>
               <a class="dropdown-item" routerLink="/member/edit">Modifica profilo</a>
               <div class="dropdown-divider"></div>
