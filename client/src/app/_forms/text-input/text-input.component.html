@@ -1,0 +1,13 @@
+<div class="form-group">
+    <input 
+    type={{type}} 
+    class="form-control" 
+    [formControl]="ngControl.control"
+    placeholder={{label}}
+    [class.is-invalid]="ngControl.touched && ngControl.invalid">  
+    <div *ngIf="ngControl.control.errors?.required" class="invalid-feedback"> Campo obbligatorio.</div> 
+    <div *ngIf="ngControl.control.errors?.minlength" class="invalid-feedback"> Il campo {{label}} può contenere minimo {{ngControl.control.errors.minlength['requiredLength']}} caratteri</div> 
+    <div *ngIf="ngControl.control.errors?.maxlength" class="invalid-feedback"> Il campo {{label}} può contenere massimo {{ngControl.control.errors.maxlength['requiredLength']}} caratteri</div>
+    <div *ngIf="ngControl.control.errors?.isMatching" class="invalid-feedback"> Le password non corrispondono.</div>  
+
+</div>
