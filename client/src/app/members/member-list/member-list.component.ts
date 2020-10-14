@@ -1,6 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { take } from 'rxjs/operators';
+import { Component, OnInit } from '@angular/core';
 import { Member } from 'src/app/_models/member';
 import { Pagination } from 'src/app/_models/pagination';
 import { User } from 'src/app/_models/user';
@@ -17,10 +15,7 @@ export class MemberListComponent implements OnInit {
   pagination: Pagination;
   userParams: UserParams;
   user: User;  
-  genderList = [{value:'male', display: 'Singoli'},{value:'female', display:'Singole'}];  
-  
- members$: Observable<Member[]>; 
- @Input() member: Member;
+  genderList = [{value:'male', display: 'Singoli'},{value:'female', display:'Singole'}];   
 
   constructor(private memberService: MembersService) { 
     this.userParams = this.memberService.getUserParams();    

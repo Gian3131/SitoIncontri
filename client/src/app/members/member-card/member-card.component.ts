@@ -10,17 +10,19 @@ import { MembersService } from 'src/app/_services/members.service';
 })
 export class MemberCardComponent implements OnInit {
 
-  @Input() member: Member;
+  @Input() member: Member;  
+  username: string;  
 
-  constructor(private memberService: MembersService, private toastr: ToastrService) { }
+  constructor(private memberService: MembersService, private toastr: ToastrService) {    
+   }
 
   ngOnInit(): void {
+    
   }
 
   addLike(member: Member){
     this.memberService.addLike(member.userName).subscribe(() => {
       this.toastr.success('Hai inviato un like a ' + member.knownAs);
     })
-  }
-
+  }  
 }
