@@ -2,7 +2,15 @@
     <div class="col-4">
         <div class="card">
             <img src="{{member.photoUrl || './assets/user.png'}}" alt="{{member.knownAs}}" class="card-img-top img-thumbnail">
-            <div class="card-body">
+            <div class="card-body">                
+                <div class="mb-2" *ngIf="(presence.onlineUsers$ | async).includes(member.userName)">
+                     <i class="fa fa-user-circle text-success"></i> Online
+                </div>     
+
+                <div class="mb-2" *ngIf="!(presence.onlineUsers$ | async).includes(member.userName)">
+                    <i class="fa fa-user-circle text-danger"></i> Offline
+               </div>  
+
                 <div>
                     <strong>Località:</strong>
                     <p>{{member.city}}, {{member.country}}</p>
@@ -44,7 +52,7 @@
                 <ngx-gallery [options]="galleryOptions" [images]="galleryImages" style="display: inline-block; margin-bottom: 20px;"></ngx-gallery>
             </tab>
             <tab heading='Messaggi' (selectTab)="onTabActivated($event)">
-                <app-member-message [messages]="messages" [username]="member.userName"></app-member-message>
+                <app-member-message [username]="member.userName"></app-member-message>
             </tab>
         </tabset>
     </div>
