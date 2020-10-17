@@ -17,7 +17,7 @@ namespace API.Services
             (
                 config.Value.CloudName,
                 config.Value.ApiKey,
-                config.Value.ApiSercret
+                config.Value.ApiSecret
             );
             _cloudinary = new Cloudinary(acc);
         }
