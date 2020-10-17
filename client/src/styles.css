@@ -44,3 +44,44 @@
     border-top: 1px solid #eee;
     padding: 15px 0;
   }
+  @media all and (max-width:480px) {    
+    .navbar{
+      width: 100%;
+      height: 21%;
+    }
+    .container{
+      vertical-align: middle;
+      width: 100%;
+      height: 20%;
+    }
+    .registrati{   
+        padding-top: 20%;
+    }
+    .login{
+      width: 55%;
+      margin-left: 65%;
+      position: absolute;
+      top: 1%;
+      right: 1%;
+    }    
+    .homepage{
+      position: absolute;
+      bottom: 70%;
+    }
+    .scelte{
+      position: absolute;
+      bottom: 50%;
+    }
+    .messaggi{
+      position: absolute;
+      bottom: 8%;
+    }
+    .etichetta_registrati{
+      color: yellow;    
+      background-color: aqua;  
+    }
+    #et-reg{
+      color: yellow;
+    }
+    }
+  

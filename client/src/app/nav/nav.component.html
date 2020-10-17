@@ -1,16 +1,16 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
     <div class="container">
-        <a class="navbar-brand" routerLink='/'>App d'incontri</a>                 
+        <a class="navbar-brand homepage" routerLink='/'>App d'incontri</a>                 
             <ul class="navbar-nav mr-auto"><!--*ngIf="accountService.currentUser$ | async" Da inserire come condizione interna se serve-->
               <ng-container >
-                <li class="nav-item">
+                <li class="nav-item scelte">
                   <a class="nav-link" routerLink='/members' routerLinkActive='active'>Utenti</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" routerLink='/lists' routerLinkActive='active'>Like</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" routerLink='/messages' routerLinkActive='active'>Messaggi</a>
+                  <a class="nav-link messaggi" routerLink='/messages' routerLinkActive='active'>Messaggi</a>
                 </li>   
                 <li *appHasRole='["Admin", "Moderator"]' class="nav-item">
                   <a class="nav-link" routerLink='/admin' routerLinkActive='active'>Admin</a>
@@ -31,18 +31,18 @@
              </div>                          
             </div>
 
-            <form *ngIf="(accountService.currentUser$ | async) === null " #loginForm="ngForm" class="form-inline mt-2 mt-md-0" (ngSubmit)="login()" autocomplete="off">
+            <form *ngIf="(accountService.currentUser$ | async) === null " #loginForm="ngForm" class="form-inline mt-2 mt-md-0 login" (ngSubmit)="login()" autocomplete="off">
              <!--Username--> <input 
                 name="username"
                 [(ngModel)]="model.username"
-                class="form-control mr-sm-2" 
+                class="form-control mr-sm-2 username" 
                 type="text" 
                 placeholder="Username">
 
               <!--Password--><input 
                 name="password"
                 [(ngModel)]="model.password"
-                class="form-control mr-sm-2" 
+                class="form-control mr-sm-2 password" 
                 type="password" 
                 placeholder="Password">
 

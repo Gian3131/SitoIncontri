@@ -1,5 +1,5 @@
 <form [formGroup]='registerForm' (ngSubmit)="registerForm.valid && register()" autocomplete="off">
-<h2 class="text-center text-primary">Registrati</h2>
+<h2 class="text-center text-primary" id="et-reg">Registrati</h2>
 <hr>
 
 <div class="form-group">
@@ -7,18 +7,18 @@
     <label class="radio-inline">
         <input type="radio" value="male" formControlName='gender'> M
     </label>
-    <label class="radio-inline">
-        <input type="radio" value="female" formControlName='gender' class="ml-3"> F
+    <label class="radio-inline femmina">
+        <input class="bottonefemmina" type="radio" value="female" formControlName='gender' class="ml-3"> F
     </label>
 </div>
 
-<app-text-input [formControl]='registerForm.controls["username"]' [label]='"Username"'></app-text-input>
-<app-text-input [formControl]='registerForm.controls["knownAs"]' [label]='"Nome utente"'></app-text-input>
-<app-date-input [formControl]='registerForm.controls["dateOfBirth"]' [label]='"Data di nascita"' [maxDate]='maxDate'></app-date-input>
-<app-text-input [formControl]='registerForm.controls["city"]' [label]='"Città"'></app-text-input>
-<app-text-input [formControl]='registerForm.controls["country"]' [label]='"Paese"'></app-text-input>
-<app-text-input [formControl]='registerForm.controls["password"]' [label]='"Password"' [type]='"password"'></app-text-input>
-<app-text-input [formControl]='registerForm.controls["confirmPassword"]' [label]='"Conferma Password"' [type]='"password"'></app-text-input>
+<app-text-input class="formregistra" [formControl]='registerForm.controls["username"]' [label]='"Username"'></app-text-input>
+<app-text-input class="formregistra" [formControl]='registerForm.controls["knownAs"]' [label]='"Nome utente"'></app-text-input>
+<app-date-input class="formregistra" [formControl]='registerForm.controls["dateOfBirth"]' [label]='"Data di nascita"' [maxDate]='maxDate'></app-date-input>
+<app-text-input class="formregistra" [formControl]='registerForm.controls["city"]' [label]='"Città"'></app-text-input>
+<app-text-input class="formregistra" [formControl]='registerForm.controls["country"]' [label]='"Paese"'></app-text-input>
+<app-text-input class="formregistra" [formControl]='registerForm.controls["password"]' [label]='"Password"' [type]='"password"'></app-text-input>
+<app-text-input class="formregistra" [formControl]='registerForm.controls["confirmPassword"]' [label]='"Conferma Password"' [type]='"password"'></app-text-input>
 
 <div class="row" *ngIf="validationErrors.length > 0">
     <ul class="text-danger">
