@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { User } from '../_models/user';
 import { AccountService } from '../_services/account.service';
 
 @Component({
@@ -11,6 +12,7 @@ export class NavComponent implements OnInit {
 
   model: any = {}; 
   errori = false;
+  user: User;
    
   constructor(public accountService : AccountService, private router: Router) { }
 
