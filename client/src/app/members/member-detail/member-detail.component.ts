@@ -8,6 +8,7 @@ import { Member } from 'src/app/_models/member';
 import { Message } from 'src/app/_models/message';
 import { User } from 'src/app/_models/user';
 import { AccountService } from 'src/app/_services/account.service';
+import { ClassServiceService } from 'src/app/_services/class-service.service';
 import { MembersService } from 'src/app/_services/members.service';
 import { MessageService } from 'src/app/_services/message.service';
 import { PresenceService } from 'src/app/_services/presence.service';
@@ -26,7 +27,7 @@ export class MemberDetailComponent implements OnInit, OnDestroy {
   messages: Message[] = [];
   user: User;
 
-  constructor(public presence: PresenceService, private route: ActivatedRoute, private messageService: MessageService, private toastr: ToastrService, private memberService: MembersService, private accountService: AccountService, private router: Router) {
+  constructor(public presence: PresenceService, private route: ActivatedRoute, private messageService: MessageService, private toastr: ToastrService, private memberService: MembersService, private accountService: AccountService, private router: Router, public classService: ClassServiceService) {
     this.accountService.currentUser$.pipe(take(1)).subscribe(user => this.user = user);
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
    } 

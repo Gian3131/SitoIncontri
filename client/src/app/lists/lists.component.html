@@ -5,8 +5,12 @@
 <div class="container mt-3">
     <div class="row">
         <div class="btn-group" name="predicate">
-            <button class="btn btn-primary mr-2" btnRadio="liked" [(ngModel)]="predicate" (click)="loadLikes()">I miei Like</button>
-            <button class="btn btn-primary" btnRadio="likedBy" [(ngModel)]="predicate" (click)="loadLikes()">Mi hanno mandato un Like</button>
+            <button class="btn mr-2" 
+            [ngClass]="{'female': classService.getGenere() === 'female','male': classService.getGenere() === 'male','bg-primary': classService.getGenere() !=='female'&& classService.getGenere() !=='male'}"
+            btnRadio="liked" [(ngModel)]="predicate" (click)="loadLikes()">I miei Like</button>
+            <button class="btn"
+            [ngClass]="{'female': classService.getGenere() === 'female','male': classService.getGenere() === 'male','bg-primary': classService.getGenere() !=='female'&& classService.getGenere() !=='male'}"
+            btnRadio="likedBy" [(ngModel)]="predicate" (click)="loadLikes()">Mi hanno mandato un Like</button>
         </div>
     </div>
 

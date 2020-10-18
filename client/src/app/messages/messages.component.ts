@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Message } from '../_models/message';
 import { Pagination } from '../_models/pagination';
+import { ClassServiceService } from '../_services/class-service.service';
 import { ConfirmService } from '../_services/confirm.service';
 import { MessageService } from '../_services/message.service';
 
@@ -17,7 +18,7 @@ export class MessagesComponent implements OnInit {
   pageSize = 6;  
   loading = false;
 
-  constructor(private messageService: MessageService, public confirmService: ConfirmService) { }
+  constructor(private messageService: MessageService, public confirmService: ConfirmService, public classService: ClassServiceService) { }
 
   ngOnInit(): void {
     this.loadMessages();

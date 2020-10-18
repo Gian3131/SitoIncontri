@@ -3,6 +3,7 @@ import { Member } from 'src/app/_models/member';
 import { Pagination } from 'src/app/_models/pagination';
 import { User } from 'src/app/_models/user';
 import { UserParams } from 'src/app/_models/userParams';
+import { ClassServiceService } from 'src/app/_services/class-service.service';
 import { MembersService } from 'src/app/_services/members.service';
 
 @Component({
@@ -17,7 +18,7 @@ export class MemberListComponent implements OnInit {
   user: User;  
   genderList = [{value:'male', display: 'Singoli'},{value:'female', display:'Singole'}];   
 
-  constructor(private memberService: MembersService) { 
+  constructor(private memberService: MembersService, public classService: ClassServiceService) { 
     this.userParams = this.memberService.getUserParams();    
   }
 

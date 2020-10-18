@@ -3,7 +3,7 @@
   background-color: #ff7e7e;
 }
 .male{
-  background-color: rgb(0, 0, 255);
+  background-color: rgb(5, 176, 255);
 }
 .tab-panel {
     border: 1px solid #ddd;
@@ -50,6 +50,50 @@
     border-top: 1px solid #eee;
     padding: 15px 0;
   }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Smartphone Verticale */
   @media all and (max-width:480px) {    
     .navbar{
       width: 100%;

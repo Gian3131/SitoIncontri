@@ -29,7 +29,9 @@
                 </div> 
                 <div class="card-footer">
                     <div class="btn-group d-flex">
-                        <button class="btn btn-primary mr-2" (click)="addLike(member)">Like</button>
+                        <button class="btn mr-2" (click)="addLike(member)"
+                        [ngClass]="{'female': classService.getGenere() === 'female','male': classService.getGenere() === 'male','bg-primary': classService.getGenere() !=='female'&& classService.getGenere() !=='male'}"
+                        >Like</button>
                         <button class="btn btn-success" (click)="selectTab(3)">Messaggio</button>
                     </div>
                 </div>           

@@ -95,6 +95,25 @@
         ]
     },
     {
+        "UserName": "Magda",
+        "Gender": "female",
+        "DateOfBirth": "1988-01-12",
+        "KnownAs": "Magda",
+        "Created": "2020-04-30",
+        "LastActive": "2020-06-21",
+        "Introduction": "Qui ipsum voluptate exercitation officia nisi velit adipisicing exercitation sint nulla do. Qui fugiat non nisi excepteur et duis elit consectetur ullamco velit fugiat. Sit do esse cupidatat quis eiusmod cupidatat.\r\n",
+        "LookingFor": "Est quis dolore duis excepteur exercitation reprehenderit ipsum elit aliquip dolor nostrud. Sint incididunt sunt deserunt pariatur pariatur minim velit voluptate consequat amet qui. Sit cillum ullamco culpa deserunt commodo culpa ad anim. Do aliqua aute proident eiusmod esse veniam ipsum nisi anim veniam ut aliquip incididunt culpa.\r\n",
+        "Interests": "Elit Lorem aliquip deserunt cupidatat ex aliquip ullamco.",
+        "City": "Italia",
+        "Country": "Iglesias",
+        "Photos": [
+            {
+                "Url": "",
+                "IsMain": false
+            }
+        ]
+    },
+    {
         "UserName": "Todd",
         "Gender": "male",
         "DateOfBirth": "1950-02-07",
