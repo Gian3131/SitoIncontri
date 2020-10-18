@@ -1,7 +1,4 @@
-<nav *ngIf="user.gender =='female'" class="navbar navbar-expand-md navbar-dark fixed-top female">
-<nav *ngIf="user.gender =='male'" class="navbar navbar-expand-md navbar-dark fixed-top male">
-<nav *ngIf="user.gender =='null'" class="navbar navbar-expand-md navbar-dark fixed-top nav-primary">
-
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
     <div class="container">
         <a class="navbar-brand homepage" routerLink='/'>App d'incontri</a>                 
             <ul class="navbar-nav mr-auto"><!--*ngIf="accountService.currentUser$ | async" Da inserire come condizione interna se serve-->
@@ -51,8 +48,5 @@
 
               <!--Submit--><button class="btn btn-success my-2 my-sm-0" type="submit">Login</button>
             </form>          
-    </div>        
-
-</nav>
-</nav>
+    </div>       
 </nav>
