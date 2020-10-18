@@ -8,6 +8,7 @@
     <div *ngIf="ngControl.control.errors?.required" class="invalid-feedback"> Campo obbligatorio.</div> 
     <div *ngIf="ngControl.control.errors?.minlength" class="invalid-feedback"> Il campo {{label}} può contenere minimo {{ngControl.control.errors.minlength['requiredLength']}} caratteri</div> 
     <div *ngIf="ngControl.control.errors?.maxlength" class="invalid-feedback"> Il campo {{label}} può contenere massimo {{ngControl.control.errors.maxlength['requiredLength']}} caratteri</div>
-    <div *ngIf="ngControl.control.errors?.isMatching" class="invalid-feedback"> Le password non corrispondono.</div>  
+    <div *ngIf="ngControl.control.errors?.isMatching" class="invalid-feedback"> Le password non corrispondono.</div>
+    <div *ngIf="ngControl.control.errors?.pattern" class="invalid-feedback"> La password deve contenere almeno 1 carattere speciale, un numero, una lettera maiuscola e una minuscola.</div>    
 
 </div>
