@@ -6,11 +6,11 @@
             [disabled]="photo.isMain"
             (click)="setMainPhoto(photo)"
             [ngClass]='photo.isMain ? "btn-success active": "btn-outline-success"'
-            ><i class="fa fa-user"></i></button>
+            ><i class="fa fa-user"> Principale</i></button>
             <button class="btn btn-sm btn-danger"
             [disabled]="photo.isMain"
             (click)="deletePhoto(photo.id)"
-            ><i class="fa fa-trash"></i></button>
+            ><i class="fa fa-trash"> Elimina</i></button>
         </div>
     </div>
 </div>
@@ -63,7 +63,7 @@
         <div>
             <div>
                 Progresso:
-                <div class="progress" style="">
+                <div class="progress">
                     <div class="progress-bar" role="progressbar" [ngStyle]="{ 'width': uploader.progress + '%' }"></div>
                 </div>
             </div>
